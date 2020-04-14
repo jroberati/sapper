@@ -41,6 +41,8 @@ export default function start(opts: {
 
 		const target = select_target(url);
 		if (target) return navigate(target, uid, true, hash);
+		
+		return handle_error(url);
 	});
 }
 
